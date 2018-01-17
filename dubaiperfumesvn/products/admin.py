@@ -15,3 +15,8 @@ class ProductAdmin(admin.ModelAdmin):
 
 admin.site.register(Product, ProductAdmin)
 
+class LandingAdmin(admin.ModelAdmin):
+    list_display = ('title','description','created_at','updated_at')
+    search_fields = ['title','description']
+
+admin.site.register(Landing, LandingAdmin)

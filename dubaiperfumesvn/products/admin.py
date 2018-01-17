@@ -10,13 +10,13 @@ admin.site.register(Category, CategoryAdmin)
 
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('code','name','price','description','star')
+    list_display = ('code','name','price', 'image', 'description','star')
     search_fields = ['code', 'name', 'description']
 
 admin.site.register(Product, ProductAdmin)
 
 class LandingAdmin(admin.ModelAdmin):
-    list_display = ('title','description','created_at','updated_at')
+    list_display = ('title','description', 'image', 'created_at','updated_at')
     search_fields = ['title','description']
 
 admin.site.register(Landing, LandingAdmin)

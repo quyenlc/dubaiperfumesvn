@@ -14,3 +14,12 @@ def index(request):
         'landings': landings,
     }
     return HttpResponse(template.render(context, request))
+
+
+def detail(request, product_id):
+    product = Product.objects.get(pk=product_id)
+    template = loader.get_template('products/detail.html')
+    context = {
+        'product': product,
+    }
+    return HttpResponse(template.render(context, request))

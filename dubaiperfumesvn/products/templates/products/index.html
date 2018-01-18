@@ -51,12 +51,27 @@
         {% for product in products %}
           <div class="col-lg-4 col-sm-6 portfolio-item">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="{{ product.image.url }}" alt=""></a>
+              <a href="{% url 'products:detail' product.id %}"><img class="card-img-top" src="{{ product.image.url }}" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#">{{ product.name }}</a>
+                  <a href="{% url 'products:detail' product.id %}">{{ product.name }}</a>
                 </h4>
-                <p class="card-text">{{ product.description }}</p>
+                {% if product.discount_price %}
+                <div class="price">
+                    <strong ">{{ product.discount_price }}.000₫</strong>
+                        <span>{{ product.price }}.000₫</span>
+                </div>
+                {% else %}
+                <div class="price">
+                    <strong ">{{ product.price }}.000₫</strong>
+                </div>
+                {% endif %}
+
+                <p class="card-text">
+                  Size: {{product.capacity}} ml<br/>
+                  Type: {{product.category}}
+                  {{ product.info|linebreaks }}
+                </p>
               </div>
             </div>
           </div>

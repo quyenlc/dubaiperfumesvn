@@ -11,11 +11,16 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name_plural = 'Categories'
+
 class Product(models.Model):
 
     code = models.CharField(max_length=50, unique=True)
     name = models.CharField(max_length=100)
+    capacity = models.PositiveIntegerField()
     price = models.PositiveIntegerField()
+    discount_price = models.PositiveIntegerField(null=True)
     description = models.CharField(max_length=800)
     info = models.TextField()
     star = models.FloatField(default=4.0)

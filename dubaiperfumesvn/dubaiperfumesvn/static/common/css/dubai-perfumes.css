@@ -1,0 +1,10 @@
+.price strong {
+  margin-bottom: 30px;
+  color: red;
+}
+
+.price span {
+  margin-bottom: 30px;
+  text-decoration: line-through;
+  font-size: smaller;
+}

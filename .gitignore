@@ -1,4 +1,4 @@
 .python-version
 *.pyc
-*/*/migrations/*
-dubaiperfumesvn/static/common/media
+*/*/migrations
+dubaiperfumesvn/dubaiperfumesvn/static/common/media/images/products

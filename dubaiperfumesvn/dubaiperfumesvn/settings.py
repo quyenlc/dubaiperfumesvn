@@ -25,7 +25,7 @@ SECRET_KEY = '8epyqldka))y3d4dt#nc=!6x00jv(-b$6kr)x*nu919lpkr_+('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['dubaiperfumes.local']
 
 
 # Application definition

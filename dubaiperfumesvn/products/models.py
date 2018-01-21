@@ -15,6 +15,7 @@ class Product(models.Model):
 
     code = models.CharField(max_length=50, unique=True)
     name = models.CharField(max_length=100)
+    discount_price = models.PositiveIntegerField(null=True)
     price = models.PositiveIntegerField()
     description = models.CharField(max_length=800)
     info = models.TextField()
